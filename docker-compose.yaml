@@ -1,0 +1,13 @@
+services:
+  sqlite:
+    build: .
+    image: sqlite
+    container_name: sqlite
+    platform: linux/amd64
+    volumes:
+      - .:/sql
+      - sqlite-data:/data
+    tty: true
+
+volumes:
+  sqlite-data:
